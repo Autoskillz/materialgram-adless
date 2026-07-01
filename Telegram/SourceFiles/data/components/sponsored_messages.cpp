@@ -439,14 +439,6 @@ SponsoredForVideo SponsoredMessages::prepareForVideo(
 	if (i == end(_dataForVideo) || i->second.entries.empty()) {
 		return {};
 	}
-	return SponsoredForVideo{
-		.list = i->second.entries | ranges::views::transform(
-			&Entry::sponsored
-		) | ranges::to_vector,
-		.startDelay = i->second.startDelay,
-		.betweenDelay = i->second.betweenDelay,
-		.state = i->second.state,
-	};
 }
 
 FullMsgId SponsoredMessages::fillTopBar(
