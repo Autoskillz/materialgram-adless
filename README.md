@@ -1,6 +1,6 @@
 <div align="center">
 <img src="./docs/assets/icon.png" width="150" align="center">
-Fork of materialgram by [kukuruzka165](https://github.com/kukuruzka165)
+Fork of materialgram by https://github.com/kukuruzka165
 main attetion on removing ads from chats/bots/chanels
   
 # [materialgram](https://github.com/kukuruzka165/materialgram)
