@@ -239,13 +239,11 @@ void SponsoredMessages::inject(
 }
 
 bool SponsoredMessages::canHaveFor(not_null<History*> history) const {
-	return false
+	return false;
 }
 
 bool SponsoredMessages::canHaveFor(not_null<HistoryItem*> item) const {
-	return false
-	return item->history()->peer->isBroadcast()
-		&& item->isRegular();
+	return false;
 }
 
 bool SponsoredMessages::isTopBarFor(not_null<History*> history) const {
