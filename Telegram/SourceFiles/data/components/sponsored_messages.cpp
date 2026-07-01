@@ -259,10 +259,7 @@ bool SponsoredMessages::isTopBarFor(not_null<History*> history) const {
 }
 
 void SponsoredMessages::request(not_null<History*> history, Fn<void()> done) {
-	return false
-	if (!canHaveFor(history)) {
-		return;
-	}
+	return false;
 	auto &request = _requests[history];
 	if (request.requestId || TooEarlyForRequest(request.lastReceived)) {
 		return;
