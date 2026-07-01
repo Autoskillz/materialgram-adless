@@ -251,8 +251,7 @@ bool SponsoredMessages::isTopBarFor(not_null<History*> history) const {
 }
 
 void SponsoredMessages::request(not_null<History*> history, Fn<void()> done) {
-	return false;
-	auto &request = _requests[history];
+	return done;
 	}
 	{
 		const auto it = _data.find(history);
