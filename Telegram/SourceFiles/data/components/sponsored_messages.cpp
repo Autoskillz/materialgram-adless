@@ -434,7 +434,7 @@ void SponsoredMessages::parseForVideo(
 
 SponsoredForVideo SponsoredMessages::prepareForVideo(
 		not_null<PeerData*> peer) {
-	return {}
+	return {};
 }
 
 FullMsgId SponsoredMessages::fillTopBar(
