@@ -247,20 +247,12 @@ bool SponsoredMessages::canHaveFor(not_null<HistoryItem*> item) const {
 }
 
 bool SponsoredMessages::isTopBarFor(not_null<History*> history) const {
-	return false
-	if (peerIsUser(history->peer->id)) {
-		if (const auto user = history->peer->asUser()) {
-			return user->isBot();
-		}
-	}
 	return false;
 }
 
 void SponsoredMessages::request(not_null<History*> history, Fn<void()> done) {
 	return false;
 	auto &request = _requests[history];
-	if (request.requestId || TooEarlyForRequest(request.lastReceived)) {
-		return;
 	}
 	{
 		const auto it = _data.find(history);
