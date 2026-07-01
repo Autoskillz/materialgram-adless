@@ -435,10 +435,6 @@ void SponsoredMessages::parseForVideo(
 SponsoredForVideo SponsoredMessages::prepareForVideo(
 		not_null<PeerData*> peer) {
 	return {}
-	const auto i = _dataForVideo.find(peer);
-	if (i == end(_dataForVideo) || i->second.entries.empty()) {
-		return {};
-	}
 }
 
 FullMsgId SponsoredMessages::fillTopBar(
