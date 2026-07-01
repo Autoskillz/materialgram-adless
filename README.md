@@ -1,8 +1,10 @@
 <div align="center">
 <img src="./docs/assets/icon.png" width="150" align="center">
+</div>
+<div>
 <a>Fork of materialgram by https://github.com/kukuruzka165</a>
 <a>With main attetion on removing ads from chats/bots/chanels</a>
-  
+<div>  
 # [materialgram](https://github.com/kukuruzka165/materialgram)
 <a href='https://flathub.org/apps/io.github.kukuruzka165.materialgram'>
   <img width='175' alt='Download on Flathub' src='https://dl.flathub.org/assets/badges/flathub-badge-en.svg'/>
