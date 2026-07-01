@@ -1,7 +1,7 @@
 <div align="center">
 <img src="./docs/assets/icon.png" width="150" align="center">
-Fork of materialgram by https://github.com/kukuruzka165
-main attetion on removing ads from chats/bots/chanels
+<a>Fork of materialgram by https://github.com/kukuruzka165</a>
+<a>With main attetion on removing ads from chats/bots/chanels</a>
   
 # [materialgram](https://github.com/kukuruzka165/materialgram)
 <a href='https://flathub.org/apps/io.github.kukuruzka165.materialgram'>
