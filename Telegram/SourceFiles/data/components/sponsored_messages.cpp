@@ -240,6 +240,14 @@ void SponsoredMessages::inject(
 
 bool SponsoredMessages::canHaveFor(not_null<History*> history) const {
 	return false;
+	}
+
+	if (history->peer->isChannel()) {
+		return true;
+	} else if (const auto user = history->peer->asUser()) {
+		return user->isBot();
+	}
+	return false;
 }
 
 bool SponsoredMessages::canHaveFor(not_null<HistoryItem*> item) const {
@@ -248,10 +256,21 @@ bool SponsoredMessages::canHaveFor(not_null<HistoryItem*> item) const {
 
 bool SponsoredMessages::isTopBarFor(not_null<History*> history) const {
 	return false;
+	if (peerIsUser(history->peer->id)) {
+		if (const auto user = history->peer->asUser()) {
+			return user->isBot();
+		}
+	}
+	return false;
 }
 
 void SponsoredMessages::request(not_null<History*> history, Fn<void()> done) {
-	return done;
+	if (!canHaveFor(history)) {
+		return;
+	}
+	auto &request = _requests[history];
+	if (request.requestId || TooEarlyForRequest(request.lastReceived)) {
+		return;
 	}
 	{
 		const auto it = _data.find(history);
@@ -420,7 +439,19 @@ void SponsoredMessages::parseForVideo(
 
 SponsoredForVideo SponsoredMessages::prepareForVideo(
 		not_null<PeerData*> peer) {
-	return {};
+	return false;
+	const auto i = _dataForVideo.find(peer);
+	if (i == end(_dataForVideo) || i->second.entries.empty()) {
+		return {};
+	}
+	return SponsoredForVideo{
+		.list = i->second.entries | ranges::views::transform(
+			&Entry::sponsored
+		) | ranges::to_vector,
+		.startDelay = i->second.startDelay,
+		.betweenDelay = i->second.betweenDelay,
+		.state = i->second.state,
+	};
 }
 
 FullMsgId SponsoredMessages::fillTopBar(
