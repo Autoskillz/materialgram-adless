@@ -23,6 +23,8 @@ The source code is published under GPLv3 with OpenSSL exception, the license is 
 </div>
 
 ## Features
+- **Custom** removed ads
+- **Custom** in the future
 - Included own Material You theme with colorizer ([Day](https://t.me/addtheme/materialgram_day), [Dark](https://t.me/addtheme/materialgram_dark))
 - **Google Sans** font everywhere (except for Arabic characters, they use the **Vazirmatn** font)
 - Material icons instead of default ones
