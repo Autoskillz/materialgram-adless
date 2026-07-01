@@ -431,19 +431,7 @@ void SponsoredMessages::parseForVideo(
 
 SponsoredForVideo SponsoredMessages::prepareForVideo(
 		not_null<PeerData*> peer) {
-	return false;
-	const auto i = _dataForVideo.find(peer);
-	if (i == end(_dataForVideo) || i->second.entries.empty()) {
-		return {};
-	}
-	return SponsoredForVideo{
-		.list = i->second.entries | ranges::views::transform(
-			&Entry::sponsored
-		) | ranges::to_vector,
-		.startDelay = i->second.startDelay,
-		.betweenDelay = i->second.betweenDelay,
-		.state = i->second.state,
-	};
+	return {};
 }
 
 FullMsgId SponsoredMessages::fillTopBar(
