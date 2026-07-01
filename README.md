@@ -62,22 +62,7 @@ The source code is published under GPLv3 with OpenSSL exception, the license is 
 - Show more info for unique gifts
 - If you would like to see a new feature in this list, please tell me in the [chat](https://t.me/materialgram_chat)
 
-## For Arch Linux users [@omansh-krishn](https://github.com/omansh-krishn) made a [PKG repository](https://github.com/materialgram/arch.git)
-You can use it right away by adding this to your pacman.conf
-```
-[materialgram]
-SigLevel = Never
-Server = https://$repo.github.io/arch
-```
 Or you can use this script
-```
-sudo sh -c "curl -s https://raw.githubusercontent.com/materialgram/arch/x86_64/installer.sh | bash"
-```
-
-## Build instructions
-* [Windows 64-bit][win64]
-* [macOS][mac]
-* [GNU/Linux using Docker][linux]
 
 ## Third-party
 * **Qt 6** ([LGPL](http://doc.qt.io/qt-6/lgpl.html)) and **Qt 5.15** ([LGPL](http://doc.qt.io/qt-5/lgpl.html)) slightly patched
